@@ -1,0 +1,2 @@
+Task,Method,Accuracy,Macro-F1
+Task 3: BERT,BERT (Fine-tuned),0.9765625,0.9468965253628902

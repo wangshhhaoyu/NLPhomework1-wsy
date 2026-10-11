@@ -1,0 +1,4 @@
+Task,Method,Accuracy,Macro-F1
+Task 1: Bag of Words,Binary BoW,0.9848090277777778,0.9634172700413278
+Task 1: Bag of Words,Word Frequency,0.9869791666666666,0.968727924421723
+Task 1: Bag of Words,Count Vector,0.9861111111111112,0.9677248023633017

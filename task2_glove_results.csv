@@ -1,0 +1,2 @@
+Task,Method,Accuracy,Macro-F1
+Task 2: Word2Vec,GloVe (Pre-trained),0.9813368055555556,0.9572652798525252
