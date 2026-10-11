@@ -1,55 +1,55 @@
-# Text Classification Experiment
+# 文本分类实验
 
-## Environment Setup
+## 环境配置
 
 ```bash
 pip install numpy pandas scikit-learn gensim transformers torch accelerate
 ```
 
-## Dataset
+## 数据集
 
-- **nyt.csv**: NYT news dataset (11,519 samples, 3 classes: sports, politics, business)
-- **ag.csv**: AG News dataset (90,000 samples, for Word2Vec training)
+- **nyt.csv**: NYT新闻数据集（11,519条，3个类别：体育、政治、商业）
+- **ag.csv**: AG新闻数据集（90,000条，用于训练Word2Vec）
 
-## Running Instructions
+## 运行说明
 
-### Task 1: Bag of Words
+### Task 1: 词袋模型
 ```bash
 python homework1.py
 ```
-Results: `task1_results.csv`
+结果文件: `task1_results.csv`
 
-### Task 2.1: GloVe Pre-trained Embedding
-Download GloVe.6B from https://nlp.stanford.edu/data/glove.6B.zip, extract to `glove.6B/` folder
+### Task 2.1: GloVe预训练词向量
+从 https://nlp.stanford.edu/data/glove.6B.zip 下载GloVe.6B，解压到 `glove.6B/` 文件夹
 ```bash
 python homework1_glove.py
 ```
-Results: `task2_glove_results.csv`
+结果文件: `task2_glove_results.csv`
 
-### Task 2.2 & 2.3: Word2Vec Training
+### Task 2.2 & 2.3: Word2Vec训练
 ```bash
 python homework1_word2vec.py
 ```
-Results: `task2_results.csv`
+结果文件: `task2_results.csv`
 
-### Task 3: BERT Fine-tuning
-Download BERT model from https://huggingface.co/google-bert/bert-base-uncased to `bert-base-uncased/` folder
+### Task 3: BERT微调
+从 https://huggingface.co/google-bert/bert-base-uncased 下载BERT模型到 `bert-base-uncased/` 文件夹
 ```bash
 python homework1_bert.py
 ```
-Results: `task3_results.csv`
+结果文件: `task3_results.csv`
 
-## Results Summary
+## 实验结果
 
-| Task | Method | Accuracy | Macro-F1 |
-|------|--------|----------|----------|
-| Task 1 | Word Frequency | 0.9870 | 0.9687 |
-| Task 2 | GloVe (Pre-trained) | 0.9813 | 0.9573 |
-| Task 3 | BERT (Fine-tuned) | 0.9766 | 0.9469 |
+| 任务 | 方法 | Accuracy | Macro-F1 |
+|------|------|----------|----------|
+| Task 1 | 词频 | 0.9870 | 0.9687 |
+| Task 2 | GloVe (预训练) | 0.9813 | 0.9573 |
+| Task 3 | BERT (微调) | 0.9766 | 0.9469 |
 
-## Notes
+## 注意事项
 
-- Random seed: 42 (fixed for reproducibility)
-- Train/Test split: 80%/20%
-- Word2Vec dimension: 100
-- BERT max_length: 64, epochs: 3
+- 随机种子: 42（固定以保证可重复性）
+- 训练/测试集划分: 80%/20%
+- Word2Vec维度: 100
+- BERT序列长度: 64，训练轮数: 3
